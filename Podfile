@@ -4,6 +4,6 @@
 use_frameworks!
 
 target 'CurlyCouscous' do
-    pod 'AFNetworking'
+    pod 'Parse'
 end
 
