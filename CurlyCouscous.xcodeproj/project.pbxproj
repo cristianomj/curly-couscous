@@ -12,6 +12,7 @@
 		4E1051031C8E819500EE7C64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1051011C8E819500EE7C64 /* Main.storyboard */; };
 		4E1051051C8E819500EE7C64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E1051041C8E819500EE7C64 /* Assets.xcassets */; };
 		4E1051081C8E819500EE7C64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1051061C8E819500EE7C64 /* LaunchScreen.storyboard */; };
+		4E1051101C8E8D5600EE7C64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10510F1C8E8D5600EE7C64 /* LoginViewController.swift */; };
 		97DE180DB3764326D411C14A /* Pods_CurlyCouscous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324918693D4B16DACEB5479D /* Pods_CurlyCouscous.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		4E1051041C8E819500EE7C64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E1051071C8E819500EE7C64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E1051091C8E819500EE7C64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E10510F1C8E8D5600EE7C64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D1249399ACFFFEEE467E0704 /* Pods-CurlyCouscous.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurlyCouscous.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurlyCouscous/Pods-CurlyCouscous.debug.xcconfig"; sourceTree = "<group>"; };
 		ED847BA0B43DF006E5131706 /* Pods-CurlyCouscous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurlyCouscous.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurlyCouscous/Pods-CurlyCouscous.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				4E1051041C8E819500EE7C64 /* Assets.xcassets */,
 				4E1051061C8E819500EE7C64 /* LaunchScreen.storyboard */,
 				4E1051091C8E819500EE7C64 /* Info.plist */,
+				4E10510F1C8E8D5600EE7C64 /* LoginViewController.swift */,
 			);
 			path = CurlyCouscous;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1051101C8E8D5600EE7C64 /* LoginViewController.swift in Sources */,
 				4E1051001C8E819500EE7C64 /* ViewController.swift in Sources */,
 				4E1050FE1C8E819500EE7C64 /* AppDelegate.swift in Sources */,
 			);
