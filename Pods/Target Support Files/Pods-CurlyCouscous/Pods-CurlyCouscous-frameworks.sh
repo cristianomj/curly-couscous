@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-CurlyCouscous/Bolts.framework"
   install_framework "Pods-CurlyCouscous/Parse.framework"
+  install_framework "Pods-CurlyCouscous/ParseUI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-CurlyCouscous/Bolts.framework"
   install_framework "Pods-CurlyCouscous/Parse.framework"
+  install_framework "Pods-CurlyCouscous/ParseUI.framework"
 fi

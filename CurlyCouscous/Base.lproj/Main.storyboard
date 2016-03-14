@@ -8,7 +8,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="CurlyCouscous" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LoginViewController" storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="CurlyCouscous" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -52,17 +52,17 @@
                     <connections>
                         <outlet property="passwordField" destination="kjj-yR-FY0" id="kfd-mq-yOc"/>
                         <outlet property="usernameField" destination="oKU-WX-a9j" id="EZb-h1-6LP"/>
-                        <segue destination="MoF-a3-RMD" kind="presentation" identifier="loginSegue" id="nvM-GR-OvA"/>
+                        <segue destination="HXA-ZV-AwP" kind="presentation" identifier="loginSegue" id="nvM-GR-OvA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="304.5" y="429.5"/>
         </scene>
-        <!--View Controller-->
+        <!--CurlyCouscous-->
         <scene sceneID="dTL-ev-utZ">
             <objects>
-                <viewController id="MoF-a3-RMD" sceneMemberID="viewController">
+                <viewController restorationIdentifier="HomeViewController" storyboardIdentifier="HomeViewController" id="MoF-a3-RMD" customClass="HomeViewController" customModule="CurlyCouscous" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QCh-tT-ORb"/>
                         <viewControllerLayoutGuide type="bottom" id="kNx-dS-1fV"/>
@@ -70,11 +70,99 @@
                     <view key="view" contentMode="scaleToFill" id="Mfy-vu-yPc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Av-fM-UW0">
+                                <rect key="frame" x="20" y="575" width="107" height="72"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.59607843140000005" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPostButton:" destination="MoF-a3-RMD" eventType="touchUpInside" id="qJx-AR-KgU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-Lj-9br">
+                                <rect key="frame" x="248" y="575" width="107" height="72"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignoutButton:" destination="MoF-a3-RMD" eventType="touchUpInside" id="eDC-A9-jBN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pz-fq-qL7">
+                                <rect key="frame" x="135" y="575" width="105" height="72"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Snap">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTakePicButton:" destination="MoF-a3-RMD" eventType="touchUpInside" id="qzJ-F0-c1Z"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="431" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="srM-YK-3TE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="503"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="431" id="CPv-aB-5qc" customClass="CurlyCouscousPostCell" customModule="CurlyCouscous" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="431"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CPv-aB-5qc" id="I5T-2U-pEF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="430.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bXS-9Y-xuS" customClass="PFImageView">
+                                                    <rect key="frame" x="8" y="37" width="359" height="385.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xq-tT-ruo">
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="2xq-tT-ruo" id="RbZ-4x-AYy"/>
+                                            <outlet property="photoView" destination="bXS-9Y-xuS" id="cdr-Hl-dgD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="CurlyCouscous" id="2sT-9T-466">
+                        <barButtonItem key="leftBarButtonItem" id="miA-5T-Faf"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="srM-YK-3TE" id="f9h-aw-dUA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5T-k8-FMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1255.5" y="429.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="e0p-1r-Yw4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HXA-ZV-AwP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bht-Gc-pwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MoF-a3-RMD" kind="relationship" relationship="rootViewController" id="8ce-7W-e0G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3h-5M-d7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="776.5" y="429.5"/>
         </scene>
