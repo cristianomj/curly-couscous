@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -28,6 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://curly-couscous.herokuapp.com/parse"
             })
         )
+        
+        if PFUser.currentUser() != nil {
+            let storyboard = UIStoryboard(name:"Main", bundle: nil)
+            window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
+        }
         
         return true
     }

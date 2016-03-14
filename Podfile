@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'CurlyCouscous' do
     pod 'Parse'
+    pod 'ParseUI'
 end
 

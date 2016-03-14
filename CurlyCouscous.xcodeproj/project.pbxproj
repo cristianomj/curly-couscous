@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4E1050FE1C8E819500EE7C64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1050FD1C8E819500EE7C64 /* AppDelegate.swift */; };
-		4E1051001C8E819500EE7C64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1050FF1C8E819500EE7C64 /* ViewController.swift */; };
 		4E1051031C8E819500EE7C64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1051011C8E819500EE7C64 /* Main.storyboard */; };
 		4E1051051C8E819500EE7C64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E1051041C8E819500EE7C64 /* Assets.xcassets */; };
 		4E1051081C8E819500EE7C64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1051061C8E819500EE7C64 /* LaunchScreen.storyboard */; };
 		4E1051101C8E8D5600EE7C64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10510F1C8E8D5600EE7C64 /* LoginViewController.swift */; };
+		4EC9FF9C1C9680E30002F616 /* CurlyCouscousPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9FF9B1C9680E30002F616 /* CurlyCouscousPostCell.swift */; };
+		4EF823A71C965E46007540FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF823A61C965E46007540FE /* HomeViewController.swift */; };
+		4EF823AB1C966945007540FE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF823AA1C966945007540FE /* Post.swift */; };
 		97DE180DB3764326D411C14A /* Pods_CurlyCouscous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324918693D4B16DACEB5479D /* Pods_CurlyCouscous.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +22,14 @@
 		324918693D4B16DACEB5479D /* Pods_CurlyCouscous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurlyCouscous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1050FA1C8E819500EE7C64 /* CurlyCouscous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurlyCouscous.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1050FD1C8E819500EE7C64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E1050FF1C8E819500EE7C64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E1051021C8E819500EE7C64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E1051041C8E819500EE7C64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E1051071C8E819500EE7C64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E1051091C8E819500EE7C64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E10510F1C8E8D5600EE7C64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4EC9FF9B1C9680E30002F616 /* CurlyCouscousPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurlyCouscousPostCell.swift; sourceTree = "<group>"; };
+		4EF823A61C965E46007540FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4EF823AA1C966945007540FE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D1249399ACFFFEEE467E0704 /* Pods-CurlyCouscous.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurlyCouscous.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurlyCouscous/Pods-CurlyCouscous.debug.xcconfig"; sourceTree = "<group>"; };
 		ED847BA0B43DF006E5131706 /* Pods-CurlyCouscous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurlyCouscous.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurlyCouscous/Pods-CurlyCouscous.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,15 +84,41 @@
 		4E1050FC1C8E819500EE7C64 /* CurlyCouscous */ = {
 			isa = PBXGroup;
 			children = (
+				4EC9FF941C96721A0002F616 /* Views */,
+				4EF823A91C96692F007540FE /* Models */,
+				4EF823A81C965E4B007540FE /* View Controllers */,
 				4E1050FD1C8E819500EE7C64 /* AppDelegate.swift */,
-				4E1050FF1C8E819500EE7C64 /* ViewController.swift */,
 				4E1051011C8E819500EE7C64 /* Main.storyboard */,
 				4E1051041C8E819500EE7C64 /* Assets.xcassets */,
 				4E1051061C8E819500EE7C64 /* LaunchScreen.storyboard */,
 				4E1051091C8E819500EE7C64 /* Info.plist */,
-				4E10510F1C8E8D5600EE7C64 /* LoginViewController.swift */,
 			);
 			path = CurlyCouscous;
+			sourceTree = "<group>";
+		};
+		4EC9FF941C96721A0002F616 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EC9FF9B1C9680E30002F616 /* CurlyCouscousPostCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4EF823A81C965E4B007540FE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EF823A61C965E46007540FE /* HomeViewController.swift */,
+				4E10510F1C8E8D5600EE7C64 /* LoginViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4EF823A91C96692F007540FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EF823AA1C966945007540FE /* Post.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC9FF9C1C9680E30002F616 /* CurlyCouscousPostCell.swift in Sources */,
 				4E1051101C8E8D5600EE7C64 /* LoginViewController.swift in Sources */,
-				4E1051001C8E819500EE7C64 /* ViewController.swift in Sources */,
 				4E1050FE1C8E819500EE7C64 /* AppDelegate.swift in Sources */,
+				4EF823A71C965E46007540FE /* HomeViewController.swift in Sources */,
+				4EF823AB1C966945007540FE /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
